@@ -12,6 +12,10 @@ app.use('/api/tiktok', tiktokApp);
 app.use('/api/instagram', instagramApp);
 app.use('/api/spotify', spotifyApp);
 
+app.get('/api/test', (req, res) => {
+  res.json({ status: true, message: 'API is working' });
+});
+
 app.get('/', (req, res) => {
   res.json({
     status: true,
